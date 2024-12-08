@@ -1,0 +1,114 @@
+.add-vacancy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  
+  .company-name {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .vacancy-toggle {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .vacancy-toggle input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .vacancy-form,
+  .no-vacancy-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vacancy-form h2,
+  .no-vacancy-box h2 {
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .no-vacancy-box {
+    text-align: center;
+    border: 2px dashed #ccc;
+    color: #666;
+  }
+  
+  .no-vacancy-box h2 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+  }
+  
+  .no-vacancy-box p {
+    font-size: 1em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .vacancy-form,
+    .no-vacancy-box {
+      padding: 15px;
+    }
+  
+    .company-name {
+      font-size: 1.2em;
+    }
+  
+    .submit-btn {
+      width: 100%;
+    }
+  }
+  

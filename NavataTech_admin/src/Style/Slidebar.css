@@ -1,0 +1,92 @@
+/* Sidebar Container */
+.sidebar {
+  background-color: #343a40; /* Dark background for sidebar */
+  min-height: 100vh; /* Full height */
+  width: 250px; /* Fixed width for larger screens */
+  padding: 20px;
+  position: fixed; /* Fixed position to stay on the left */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: transform 0.3s ease; /* Smooth transition for sidebar visibility */
+  transform: translateX(0); /* Default visible position */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Keep sidebar open on click */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%); /* Hide sidebar off-screen for small screens */
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Show sidebar when open */
+  }
+}
+
+/* Sidebar Header */
+.sidebar h5 {
+  color: white; /* White text color */
+  margin-bottom: 20px; /* Space below header */
+}
+
+/* Navigation Items */
+.nav {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.nav-item {
+  margin: 10px 0; /* Space between nav items */
+}
+
+/* NavLink Styles */
+.nav-link {
+  color: #b8c2cc; /* Light grey text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px; /* Padding for clickable area */
+  border-radius: 5px; /* Rounded corners */
+  display: block; /* Full-width clickable area */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Active Link Style */
+.active {
+  background-color: #0072ff; /* Highlight active link */
+  color: white; /* Change text color to white */
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+  color: white; /* Change text color to white on hover */
+}
+
+/* Menu Button */
+.menu-btn {
+  display: none;
+  background-color: #0072ff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  border-radius: 5px;
+}
+
+/* Show the menu button on small screens */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
+}

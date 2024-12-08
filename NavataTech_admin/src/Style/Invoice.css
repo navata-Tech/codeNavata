@@ -1,0 +1,186 @@
+/* Invoices Container */
+.invoices-container {
+    padding: 20px; /* Padding around the container */
+    background-color: #fff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-left: 60px; /* Space from the sidebar (default width) */
+    margin-right: 20px; /* Space from the right edge */
+    margin-top: 20px; /* Space from the top edge */
+    transition: margin-left 0.3s ease; /* Smooth transition for margin-left */
+}
+
+/* Heading Styles */
+.invoices-container h2 {
+    color: #333; /* Dark color for headings */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+/* Table Styles */
+.table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Remove spacing between cells */
+    margin-top: 20px; /* Space above the table */
+}
+
+.table th, .table td {
+    padding: 12px 15px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Bottom border for rows */
+}
+
+.table th {
+    background-color: #007bff; /* Blue background for table headers */
+    color: #ffffff; /* White text color for headers */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Light background on row hover */
+}
+
+.table td {
+    color: #555; /* Dark gray text for table data */
+}
+
+/* Button Styles */
+.edit-button {
+    background-color: #28a745; /* Green background for edit button */
+    color: #ffffff; /* White text for button */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.edit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Loader Styles */
+.loader {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height for the loader */
+    font-size: 1.5em; /* Larger font size */
+    color: #007bff; /* Blue color for loader text */
+}
+
+/* Error Message Styles */
+.error {
+    color: red; /* Red color for error messages */
+    margin-top: 20px; /* Space above error messages */
+    text-align: center; /* Center the error text */
+}
+
+/* Empty State Message */
+.no-invoices {
+    text-align: center; /* Center the empty state message */
+    margin-top: 20px; /* Space above the message */
+    color: #777; /* Gray color for the message */
+}
+
+/* Pagination Styles */
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin-top: 20px; /* Space above the pagination */
+}
+
+.pagination {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Display pagination items inline */
+}
+
+.page-item {
+    margin: 0 5px; /* Space between pagination items */
+}
+
+.page-link {
+    color: #007bff; /* Blue color for links */
+    padding: 8px 12px; /* Padding for pagination items */
+    border: 1px solid #ddd; /* Border around pagination items */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove link underline */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.page-link:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+
+.page-item.active .page-link {
+    background-color: #007bff; /* Blue background for active page */
+    color: white; /* White text for active page */
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .invoices-container {
+        margin-left: 200px; /* Adjust margin for smaller screens */
+    }
+
+    .table th, .table td {
+        padding: 8px; /* Reduce padding in table cells */
+        font-size: 14px; /* Smaller font size for table on small screens */
+    }
+
+    .pagination {
+        font-size: 14px; /* Smaller font size for pagination */
+    }
+
+    .loader {
+        font-size: 1.2em; /* Smaller loader font size */
+    }
+
+    .error, .no-invoices {
+        font-size: 14px; /* Smaller font size for error and no-invoice messages */
+    }
+}
+
+@media (max-width: 576px) {
+    .invoices-container {
+        margin-left: 150px; /* Adjust margin for small screens */
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .table {
+        font-size: 12px; /* Smaller font size for table on extra small screens */
+    }
+
+    .pagination {
+        font-size: 12px; /* Smaller font size for pagination */
+    }
+
+    .loader {
+        font-size: 1em; /* Smaller loader font size */
+    }
+
+    .table th, .table td {
+        padding: 6px; /* Further reduce padding for small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .invoices-container {
+        margin-left: 130px; /* Minimal margin for extra small screens */
+    }
+    .table {
+        font-size: 11px; /* Even smaller font size for table */
+    }
+
+    .loader {
+        font-size: 0.9em; /* Smaller loader font size for extra small screens */
+    }
+
+    .pagination {
+        font-size: 11px; /* Even smaller font size for pagination */
+    }
+
+    .table th, .table td {
+        padding: 5px; /* Small padding for table cells */
+    }
+}

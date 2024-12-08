@@ -1,0 +1,163 @@
+/* YourMainContentStyle.css */
+
+.main-container {
+  display: flex; /* Use flexbox for layout */
+}
+
+.content {
+  flex: 1; /* Take remaining space */
+  padding: 20px; /* Add padding for content */
+  margin-left: 250px; /* Match this to the width of the sidebar */
+  transition: margin-left 0.3s ease; /* Smooth transition for margin adjustment */
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 200px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    margin-left: 150px; /* Further adjust for mobile */
+  }
+}
+
+
+
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif; /* Set a clean font for the entire body */
+  margin: 20px; /* Remove default margin */
+  padding: 20px; /* Add padding around the body */
+  background-color: #f4f4f4; /* Light background color */
+}
+
+/* App Container */
+.app-container {
+  display: flex; /* Use flexbox for layout */
+  height: 100vh; /* Full height to match the viewport */
+  background-color: #f4f4f4; /* Background color for the app */
+}
+
+/* Content Container */
+.content-container {
+  flex-grow: 1; /* Allow this to grow and take remaining space */
+  align-items: center;
+  align-content: center;
+  padding: 20px; /* Padding for content */
+  overflow-y: auto; /* Scrollable content if it overflows */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100vh; /* Full height to match the viewport */
+  background-color: #343a40; /* Dark background for sidebar */
+  color: #ffffff; /* White text color */
+  padding: 20px; /* Padding around the sidebar content */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.sidebar h5 {
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 1.25rem; /* Font size for the title */
+}
+
+/* Navigation Styles */
+.nav {
+  padding-left: 0; /* Remove default padding */
+  list-style-type: none; /* Remove bullet points */
+}
+
+.nav-item {
+  margin: 10px 0; /* Space between nav items */
+}
+
+.nav-link {
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the link fill the width */
+  padding: 10px 15px; /* Padding for links */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Active link background */
+  font-weight: bold; /* Bold font for active link */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack sidebar and content vertically */
+  }
+
+
+
+  .content-container {
+    padding: 10px; /* Less padding on small screens */
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    display: none; /* Hide sidebar on very small screens */
+  }
+
+  .content-container {
+    padding: 5px; /* Minimal padding on extra small screens */
+  }
+}
+
+  /* src/components/ConfirmationModal.css */
+  .confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .confirmation-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .confirmation-modal-buttons {
+    margin-top: 20px;
+  }
+  
+  .confirm-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .cancel-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

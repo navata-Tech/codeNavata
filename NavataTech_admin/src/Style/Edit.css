@@ -1,0 +1,122 @@
+/* Edit.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-left: 250px; /* Leave space for the sidebar */
+}
+
+.editInvoice {
+    max-width: 900px; /* Limits the maximum width for larger screens */
+    margin: 20px auto; /* Centers the form horizontally */
+    padding: 20px; /* Adds padding inside the container */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+.editInvoice h2 {
+    text-align: center; /* Centers the title */
+    margin-bottom: 20px; /* Adds space below the title */
+}
+
+.editInvoice__form {
+    display: flex; /* Allows flexibility for child elements */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if they don't fit */
+}
+
+.editInvoice__field {
+    margin-bottom: 20px; /* Space between fields */
+    flex: 1 1 45%; /* Allows the field to grow and shrink, sets a basis width of 45% */
+    min-width: 250px; /* Ensures a minimum width for fields */
+}
+
+.editInvoice__field label {
+    margin-top: 10px; /* Space above the label */
+    font-weight: bold; /* Makes labels bold */
+}
+
+.editInvoice__input {
+    width: 95%; /* Full width for inputs */
+    padding: 10px; /* More padding for comfort */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger font size */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.editInvoice__button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the buttons */
+    align-items: center; /* Align items vertically centered */
+    margin-top: 15px; /* Reduced space above the button container */
+}
+
+.editInvoice__button {
+    padding: 10px 15px; /* Adjusted padding for buttons */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Slightly smaller button text size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin: 0 5px; /* Reduced space between buttons */
+}
+
+.editInvoice__button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.editInvoice__item {
+    display: flex; /* Keeps items aligned in a row */
+    flex-direction: row; /* Aligns item fields horizontally */
+    justify-content: space-between; /* Space between item fields */
+    align-items: center; /* Aligns items vertically centered */
+    padding: 10px; /* More padding for comfort */
+    border: 1px solid #ccc; /* Border for item sections */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below each item section */
+}
+
+/* Center the Discount field */
+.editInvoice__discount-section {
+    margin-top: 20px; /* Add space above the section */
+    margin-bottom: 15px; /* Space between fields */
+    flex: 1 1 100%; /* Full width for discount section */
+    min-width: 250px; /* Ensures a minimum width for fields */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        margin-left: 0; /* Remove margin for body on small screens */
+    }
+
+    .editInvoice {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .editInvoice__field {
+        flex: 1 1 100%; /* Full width for fields on small screens */
+    }
+
+    .editInvoice__item {
+        flex-direction: column; /* Stack item fields vertically on small screens */
+    }
+
+    .editInvoice__item label {
+        margin-bottom: 5px; /* Space below labels on small screens */
+        flex-basis: auto; /* Remove flex basis for labels */
+    }
+
+    .editInvoice__item input {
+        width: 100%; /* Full width for inputs */
+    }
+
+    .editInvoice__button {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+}
